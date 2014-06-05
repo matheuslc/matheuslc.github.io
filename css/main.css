@@ -20,7 +20,7 @@ body {
 .photo {
     display: block;
     width: 200px;
-    height: 270px;
+    height: 220px;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -53,9 +53,17 @@ body {
 
 .menu {
     list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
 }
 
 .menu-item {
     display: inline-block;
     color: #fff;
+    font-size: 4rem;
+    padding: 0 5px;
 }
