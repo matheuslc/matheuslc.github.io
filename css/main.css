@@ -1,0 +1,33 @@
+/**
+ * Name: matheuslc
+ * Author: Matheus Carmo
+ * Licesense: Whatever 
+ */
+
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    font-size: 16px;
+    background: url("../img/bg.jpg");
+    background-size: cover;
+}
+
+.photo {
+    display: block;
+    width: 200px;
+    height: 270px;
+    text-align: center;
+    margin: 50px auto 0 auto;
+    background-color: transparent;
+    border: 3px solid #f7f7f7;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
