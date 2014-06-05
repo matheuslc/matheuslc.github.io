@@ -22,7 +22,9 @@ body {
     width: 200px;
     height: 270px;
     text-align: center;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
+    position: relative;
+    top: 40px;
     background-color: transparent;
     border: 3px solid #f7f7f7;
     -webkit-border-radius: 50%;
@@ -31,3 +33,29 @@ body {
     overflow: hidden;
 }
 
+.title {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    font-size: 6.0rem;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu-item {
+    display: inline-block;
+    color: #fff;
+}
