@@ -1,7 +1,7 @@
 /**
  * Name: matheuslc
  * Author: Matheus Carmo
- * Licesense: Whatever 
+ * License: Whatever 
  */
 
 
@@ -13,14 +13,14 @@ html {
 body {
     height: 100%;
     font-size: 16px;
-    background: url("../img/bg.jpg");
+    background: url("../img/bg-o.jpg");
     background-size: cover;
 }
 
 .photo {
     display: block;
     width: 200px;
-    height: 220px;
+    height: 200px;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -72,7 +72,8 @@ body {
 @media (max-width: 768px) {
 
     body {
-        background: url('../img/bg-m.jpg');
+        background: url('../img/bg-m-o.jpg');
         background-size: cover;
     }
 }
+
