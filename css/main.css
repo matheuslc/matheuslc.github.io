@@ -67,3 +67,12 @@ body {
     font-size: 4rem;
     padding: 0 5px;
 }
+
+
+@media (max-width: 768px) {
+
+    body {
+        background: url('../img/bg-m.jpg');
+        background-size: cover;
+    }
+}

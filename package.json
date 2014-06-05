@@ -1,0 +1,24 @@
+{
+  "name": "matheuslc",
+  "version": "0.0.1",
+  "description": "A little about me, matheuslc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matheuslc/matheuslc.github.io"
+  },
+  "author": "Matheus Lucca do Carmo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matheuslc/matheuslc.github.io/issues"
+  },
+  "homepage": "https://github.com/matheuslc/matheuslc.github.io",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.9.0",
+    "grunt-contrib-uglify": "^0.4.0"
+  }
+}
