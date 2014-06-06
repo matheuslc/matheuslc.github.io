@@ -26,6 +26,16 @@ module.exports = function(grunt) {
 
     jshint: {
       all: ['Gruntfile.js', 'js/**/*.js']
+    },
+
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          open: true,
+          keepalive: true
+        }
+      }
     }
 
     });
@@ -33,9 +43,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('default', ['uglify','cssmin']);
+  grunt.registerTask('default', ['uglify','cssmin','connect']);
 
 
 };
