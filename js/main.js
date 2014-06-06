@@ -14,6 +14,11 @@
            {
               bg: 'url(../img/beach.jpg)',
               img: 'matheuslcbeachsmall.jpg'
+           },
+
+           {
+            bg: 'url(../img/dark.jpg)',
+            img: 'viviane.jpg'
            }
         ];
 
@@ -62,6 +67,10 @@
         css.style.background = items[n].bg;
         css.style.backgroundSize = "cover";
         img.setAttribute('src', "img/" + items[n].img);
+
+        if(items[n].img == "viviane.jpg") {
+          document.querySelector('.title').innerHTML = "Viviane de Brito";
+        }
 
   		};
 
