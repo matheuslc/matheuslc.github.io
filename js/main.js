@@ -17,7 +17,7 @@
 
   			// Catch the element
   			for(i = 0; i < css.length; i++) {
-  				if( css[i].href == "http://" + document.location.hostname + ":" + document.location.port + "/css/main.css") {
+  				if( css[i].href == "http://" + document.location.hostname + ":" + document.location.port + "/css/main.css" || css[i].href == "http://" + document.location.hostname + "/css/main.css") {
   					sheet = css[i];
   				}
   			}
