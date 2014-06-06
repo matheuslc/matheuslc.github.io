@@ -17,9 +17,10 @@
            },
 
            {
-            bg: 'url(../img/dark.jpg)',
-            img: 'viviane.jpg'
+              bg: 'url(../img/bg-o.jpg)',
+              img: 'matheuslcsmall.jpg'
            }
+           
         ];
 
        var randomize = function (firstvalue, secondvalue) {
@@ -67,10 +68,6 @@
         css.style.background = items[n].bg;
         css.style.backgroundSize = "cover";
         img.setAttribute('src', "img/" + items[n].img);
-
-        if(items[n].img == "viviane.jpg") {
-          document.querySelector('.title').innerHTML = "Viviane de Brito";
-        }
 
   		};
 
