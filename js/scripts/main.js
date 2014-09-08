@@ -43,7 +43,7 @@ var randomize = function (firstvalue, secondvalue) {
     } else {
     return (Math.random() * (max-min)+min).toFixed(2);
     }
-};
+}
 
 
 change = function() {
