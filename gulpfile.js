@@ -49,6 +49,16 @@ gulp.task('scripts', function() {
 
 });
 
+gulp.task('image', function() {
+
+  return gulp.src('img/src/*')
+    .pipe(imagemin({
+      optimizationLevel: 5
+    }))
+    .pipe(gulp.dest('img/'));
+
+});
+
 gulp.task('default', ['server'], function() {
 
   gulp.watch('css/sass/*.scss', ['styles']);
