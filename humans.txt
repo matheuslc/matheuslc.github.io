@@ -3,13 +3,9 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+  Matheus Lucca do Carmo -- Front-end -- @mematheuslc
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+  HTML5, CSS3, JS
+  Normalize.css, jQuery, Modernizr, Gulp, Travis

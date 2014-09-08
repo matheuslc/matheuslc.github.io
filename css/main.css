@@ -1,7 +1,7 @@
-/**
-* Name: matheuslc
-* Author: Matheus Carmo
-* License: Whatever 
+/*
+ * Name: matheuslc
+ * Author: Matheus Carmo
+ * License: Whatever
 */
 
 
@@ -94,8 +94,9 @@ body {
 @media (max-width: 768px) {
 
   body {
-      background: url('../img/bg-m-o.jpg');
-      background-size: cover;
+    background: url('../img/bg-m-o.jpg');
+    background-size: cover;
   }
+
 }
 
