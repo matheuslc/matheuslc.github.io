@@ -12,7 +12,9 @@ var gulp         = require('gulp'),
 
 gulp.task('server', function() {
 
-  connect.server();
+  connect.server({
+    port: 3000
+  });
 
 });
 
@@ -29,7 +31,7 @@ gulp.task('ci', function() {
 
 gulp.task('styles', function() {
 
-  return gulp.src('css/sass/*.scss')
+  return gulp.src('css/sass/main.scss')
     .pipe(sass())
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'ios 6', 'android 4'))
     .pipe(concat('main.css'))
