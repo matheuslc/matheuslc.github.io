@@ -1,4 +1,4 @@
-baseURL = "matheuslc.github.io"
+baseURL = "https://matheuslc.github.io"
 languageCode = "pt-br"
 title = "matheu sé loco blog"
 theme = "monopriv"
