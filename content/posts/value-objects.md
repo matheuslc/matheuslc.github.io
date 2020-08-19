@@ -12,12 +12,12 @@ Lembrando que essa é a minha visão baseado em quem eu sou e minhas experiênci
 
 
 # Value Objects?
-Esse conceito foi introduzido por Eric Evans no famoso livro (Domain Driven Design)[https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651] e tive a oportunidade de aprender melhor no livro (Domain Modelling Made Functional)[https://www.amazon.com.br/Domain-Modeling-Made-Functional-Domain-Driven-ebook/dp/B07B44BPFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Domain+Modelling+Made+Functional&qid=1597874431&s=books&sr=1-1] do Scott Wlaschin, que já recomendo aqui.
+Esse conceito foi introduzido por Eric Evans no famoso livro [Domain Driven Design}(https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651) e tive a oportunidade de aprender melhor no livro [Domain Modelling Made Functional](https://www.amazon.com.br/Domain-Modeling-Made-Functional-Domain-Driven-ebook/dp/B07B44BPFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Domain+Modelling+Made+Functional&qid=1597874431&s=books&sr=1-1) do Scott Wlaschin, que já recomendo aqui.
 
 Basicamente, Values Objects são uma meneira de ter um objeto que representa um valor em sua aplicação. Um valor qualquer que não precise ser identificado por um ID, por exemplo. Isso quer dizer que um Value Object **não possuí identidade** e são **imutáveis**, não podem mudar seus valores após serem criados. Se o valor precisa mudar, então é gerado uma nova versão do Value Object.
 
 **Mas por que imutável?**
-Garantindo que seu Value Object é imutável, você impede que bugs de (compartilhamento de memória)[https://martinfowler.com/bliki/AliasingBug.html] ocorram. Em Golang, passando por valor ao invés do ponteiro já resolve isso, pois estaremos passando uma cópia que pode ser modificada sem refletir no valor original.
+Garantindo que seu Value Object é imutável, você impede que bugs de [compartilhamento de memória](https://martinfowler.com/bliki/AliasingBug.html) ocorram. Em Golang, passando por valor ao invés do ponteiro já resolve isso, pois estaremos passando uma cópia que pode ser modificada sem refletir no valor original.
 
 Se você precisa que sua estrutura tenha uma identidade, como um ID único, pra conseguir referenciar explicitamente, esse seu valor é uma *Entidade*.
 
@@ -53,7 +53,7 @@ O ponto é, o tipo primitivo não reflete o seu negócio, reflete a implementaç
 
 ### Evoluindo mais no exemplo para que você, caro leitor, não vá embora
 
-O DDD tem a intenção de tornar o design do seu código fácil de entender a ponto de uma pessoa de negócios conseguir ler seus domínios e entender o que cada coisa é e faz. Isso é chamado de *linguagem ubíqua* (ubiquitous language)[https://www.quora.com/What-is-Ubiquitous-language], uma linguagem única que todas as partes envolvidas no projeto conhecem e sabem o que é.
+O DDD tem a intenção de tornar o design do seu código fácil de entender a ponto de uma pessoa de negócios conseguir ler seus domínios e entender o que cada coisa é e faz. Isso é chamado de *linguagem ubíqua* [ubiquitous language](https://www.quora.com/What-is-Ubiquitous-language), uma linguagem única que todas as partes envolvidas no projeto conhecem e sabem o que é.
 
 No nosso exemplo, quem lê o código sabe que existe uma estrutura *Product* com um campo Name string e um Price float64.
 
@@ -117,7 +117,7 @@ fmt.Printf("The product %v price is: %v", product.Name, product.Price)
 
 Show, agora temos a validações. Mas qual é o problema?
 
-Primeiro, você deve ter percebido que o construtor ficou grande e cheio de (guard-clauses)[https://refactoring.guru/replace-nested-conditional-with-guard-clauses], podemos extrair as validações para funções separadas que validam esses atributos. E ai você deve estar pensando.
+Primeiro, você deve ter percebido que o construtor ficou grande e cheio de [guard-clauses](https://refactoring.guru/replace-nested-conditional-with-guard-clauses), podemos extrair as validações para funções separadas que validam esses atributos. E ai você deve estar pensando.
 
 - Bom, essa validação de valores posso usar em outros pontos do código. Vou extrair para um pacote separado.
 
@@ -153,7 +153,7 @@ func NewDeliveryOrder(price float64, products []Product) (DeliveryOrder, error) 
 
 ```
 
-Não estou dizendo que não devem existir pacotes de validação, como o (ozzo-validation)[https://github.com/go-ozzo/ozzo-validation]. O propósito do negócio da biblioteca ozzo-validation é validar valores, o nosso é criar um produto válido e podemos usar um pacote de validação para nos ajudar a chegar nesse objetivo.
+Não estou dizendo que não devem existir pacotes de validação, como o [ozzo-validation](https://github.com/go-ozzo/ozzo-validation). O propósito do negócio da biblioteca ozzo-validation é validar valores, o nosso é criar um produto válido e podemos usar um pacote de validação para nos ajudar a chegar nesse objetivo.
 
 
 ### Como pode ser feito? Chegou a punch-line (ou o drop da música)
