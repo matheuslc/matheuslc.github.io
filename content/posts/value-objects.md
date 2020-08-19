@@ -12,7 +12,7 @@ Lembrando que essa é a minha visão baseado em quem eu sou e minhas experiênci
 
 
 # Value Objects?
-Esse conceito foi introduzido por Eric Evans no famoso livro [Domain Driven Design}(https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651) e tive a oportunidade de aprender melhor no livro [Domain Modelling Made Functional](https://www.amazon.com.br/Domain-Modeling-Made-Functional-Domain-Driven-ebook/dp/B07B44BPFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Domain+Modelling+Made+Functional&qid=1597874431&s=books&sr=1-1) do Scott Wlaschin, que já recomendo aqui.
+Esse conceito foi introduzido por Eric Evans no famoso livro [Domain Driven Design](https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651) e tive a oportunidade de aprender melhor no livro [Domain Modelling Made Functional](https://www.amazon.com.br/Domain-Modeling-Made-Functional-Domain-Driven-ebook/dp/B07B44BPFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Domain+Modelling+Made+Functional&qid=1597874431&s=books&sr=1-1) do Scott Wlaschin, que já recomendo aqui.
 
 Basicamente, Values Objects são uma meneira de ter um objeto que representa um valor em sua aplicação. Um valor qualquer que não precise ser identificado por um ID, por exemplo. Isso quer dizer que um Value Object **não possuí identidade** e são **imutáveis**, não podem mudar seus valores após serem criados. Se o valor precisa mudar, então é gerado uma nova versão do Value Object.
 
