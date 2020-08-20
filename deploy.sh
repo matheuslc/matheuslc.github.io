@@ -20,4 +20,4 @@ git commit -m "Remove everything except public package"
 git push -f origin gh-pages
 git checkout master
 
-printf "\033[0;Done...\033[0m\n"
+printf "\033[0;32mDONE DONE DONE DONE...\033[0m\n"
