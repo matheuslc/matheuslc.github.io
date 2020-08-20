@@ -1,0 +1,5 @@
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ee030b0fd99a2c913cbd53b4341e7e1b4ae1a450
+    publish_dir: ./public
