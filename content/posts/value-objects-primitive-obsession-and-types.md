@@ -1,12 +1,12 @@
 ---
-title: "Value Objects, Primitive Possesion & Types"
+title: "Value Objects, Primitive Obsession & Types"
 date: 2020-08-20T14:41:14-03:00
 draft: false
 ---
 
 Salve galera, tudo certo?
 
-A ideia deste post é trazer a minha visão sobre como usar **Values Objects**, evitar **Primitive Possesions** e usar os **Types** do Golang para melhorar o design do seu projeto, evidenciando melhor o quê ele faz e com isso tornando o código legível e preparado para mudanças.
+A ideia deste post é trazer a minha visão sobre como usar **Values Objects**, evitar **Primitive Obsession** e usar os **Types** do Golang para melhorar o design do seu projeto, evidenciando melhor o quê ele faz e com isso tornando o código legível e preparado para mudanças.
 
 Lembrando que essa é a minha visão baseado em quem eu sou e minhas experiências. Leia sempre criticando o que está sendo dito e não esqueça de comentar! (tomara que eu já tenha integrado o Disqus)
 
