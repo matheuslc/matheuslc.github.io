@@ -109,7 +109,7 @@ if err != nil {
 }
 
 // Criando um produto válido
-product, err := NewProduct("", 4.99)
+product, err := NewProduct("Salada Single", 4.99)
 
 // Output: The product Salada Single price is: 4.99
 fmt.Printf("The product %v price is: %v", product.Name, product.Price)
