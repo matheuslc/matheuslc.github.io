@@ -14,7 +14,7 @@ Lembrando que essa é a minha visão baseado em quem eu sou e minhas experiênci
 # Value Objects?
 Esse conceito foi introduzido por Eric Evans no famoso livro [Domain Driven Design](https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651) e tive a oportunidade de ler mais sobre no livro [Domain Modelling Made Functional](https://www.amazon.com.br/Domain-Modeling-Made-Functional-Domain-Driven-ebook/dp/B07B44BPFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Domain+Modelling+Made+Functional&qid=1597874431&s=books&sr=1-1) do Scott Wlaschin, que já recomendo aqui.
 
-Basicamente, Values Objects são uma meneira de ter um objeto que representa um valor em sua aplicação. Um valor qualquer que não precise ser identificado por um ID. Isso quer dizer que um Value Object **não possuí identidade**. Value Objects também são **imutáveis**, seus valores não podem mudar após serem criados. Se o valor precisa mudar, então é gerado um novo Value Object com os novos atributos.
+Basicamente, Values Objects são uma maneira de ter um objeto que representa um valor em sua aplicação. Um valor qualquer que não precise ser identificado por um ID. Isso quer dizer que um Value Object **não possuí identidade**. Value Objects também são **imutáveis**, seus valores não podem mudar após serem criados. Se o valor precisa mudar, então é gerado um novo Value Object com os novos atributos.
 
 **Mas por que imutável?**
 Garantindo que seu Value Object é imutável, você impede que bugs de [compartilhamento de memória](https://martinfowler.com/bliki/AliasingBug.html) ocorram. Em Golang, passando por valor ao invés do ponteiro já resolve isso, pois estaremos passando uma cópia que pode ser modificada sem refletir no valor original.
@@ -127,7 +127,7 @@ E ai nasce mais um pacote *utils*.
 
 Um pacote utils não diz muito bem o que ele faz sem que o usuário vá lá e verifique todas as funções públicas que ele expõe.
 
-Por exemplo, poderíamos ter um pacote que sabe validar strings com regras definidas. Mas as chances de um novo desenvolvedor simplismente recriar a validação ao invés de procurar pelo pacote utils é grande. Reaproveitamos as regras de validação mas as checegens sempre vão precisar existir quando uma nova estrutura com o mesmo conceito existir.
+Por exemplo, poderíamos ter um pacote que sabe validar strings com regras definidas. Mas as chances de um novo desenvolvedor simplismente recriar a validação ao invés de procurar pelo pacote utils é grande. Reaproveitamos as regras de validação mas as checagens sempre vão precisar existir quando uma nova estrutura com o mesmo conceito existir.
 
 ```go
 
