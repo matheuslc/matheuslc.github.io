@@ -1,5 +1,3 @@
-baseURL = "https://matheuslc.github.io"
-languageCode = "pt-br"
-title = "matheu sé loco blog"
-theme = "monopriv"
-
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
