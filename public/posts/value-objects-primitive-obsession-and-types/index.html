@@ -43,7 +43,7 @@
 <p>Lembrando que essa é a minha visão baseado em quem eu sou e minhas experiências. Leia sempre criticando o que está sendo dito e não esqueça de comentar! (tomara que eu já tenha integrado o Disqus)</p>
 <h1 id="value-objects">Value Objects?</h1>
 <p>Esse conceito foi introduzido por Eric Evans no famoso livro <a href="https://www.amazon.com.br/Domain-Driven-Design-Eric-Evans/dp/8550800651">Domain Driven Design</a> e tive a oportunidade de ler mais sobre no livro <a href="https://www.amazon.com.br/Domain-Modeling-Made-Functional-Domain-Driven-ebook/dp/B07B44BPFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=Domain+Modelling+Made+Functional&amp;qid=1597874431&amp;s=books&amp;sr=1-1">Domain Modelling Made Functional</a> do Scott Wlaschin, que já recomendo aqui.</p>
-<p>Basicamente, Values Objects são uma meneira de ter um objeto que representa um valor em sua aplicação. Um valor qualquer que não precise ser identificado por um ID. Isso quer dizer que um Value Object <strong>não possuí identidade</strong>. Value Objects também são <strong>imutáveis</strong>, seus valores não podem mudar após serem criados. Se o valor precisa mudar, então é gerado um novo Value Object com os novos atributos.</p>
+<p>Basicamente, Values Objects são uma maneira de ter um objeto que representa um valor em sua aplicação. Um valor qualquer que não precise ser identificado por um ID. Isso quer dizer que um Value Object <strong>não possuí identidade</strong>. Value Objects também são <strong>imutáveis</strong>, seus valores não podem mudar após serem criados. Se o valor precisa mudar, então é gerado um novo Value Object com os novos atributos.</p>
 <p><strong>Mas por que imutável?</strong>
 Garantindo que seu Value Object é imutável, você impede que bugs de <a href="https://martinfowler.com/bliki/AliasingBug.html">compartilhamento de memória</a> ocorram. Em Golang, passando por valor ao invés do ponteiro já resolve isso, pois estaremos passando uma cópia que pode ser modificada sem refletir no valor original.</p>
 <p>Se você precisa que sua estrutura tenha uma identidade, como um ID único, pra conseguir referenciar explicitamente, esse seu valor é uma <a href="https://enterprisecraftsmanship.com/posts/entity-vs-value-object-the-ultimate-list-of-differences/"><strong>Entidade</strong></a>.</p>
@@ -129,7 +129,7 @@ Garantindo que seu Value Object é imutável, você impede que bugs de <a href="
 <p>E ai nasce mais um pacote <em>utils</em>.</p>
 <h3 id="e-qual-o-problema-de-ter-um-pacote-utils">E qual o problema de ter um pacote utils?</h3>
 <p>Um pacote utils não diz muito bem o que ele faz sem que o usuário vá lá e verifique todas as funções públicas que ele expõe.</p>
-<p>Por exemplo, poderíamos ter um pacote que sabe validar strings com regras definidas. Mas as chances de um novo desenvolvedor simplismente recriar a validação ao invés de procurar pelo pacote utils é grande. Reaproveitamos as regras de validação mas as checegens sempre vão precisar existir quando uma nova estrutura com o mesmo conceito existir.</p>
+<p>Por exemplo, poderíamos ter um pacote que sabe validar strings com regras definidas. Mas as chances de um novo desenvolvedor simplismente recriar a validação ao invés de procurar pelo pacote utils é grande. Reaproveitamos as regras de validação mas as checagens sempre vão precisar existir quando uma nova estrutura com o mesmo conceito existir.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">deliveryOrder</span> <span style="color:#66d9ef">struct</span> {
   <span style="color:#a6e22e">Products</span> []<span style="color:#a6e22e">Product</span>
@@ -226,6 +226,27 @@ Garantindo que seu Value Object é imutável, você impede que bugs de <a href="
 
   </section>
 </article>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "matheuslc-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 </main>
 
