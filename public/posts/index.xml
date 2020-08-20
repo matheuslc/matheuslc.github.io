@@ -6,7 +6,16 @@
     <description>Recent content in Posts on matheu sé loco blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 19 Aug 2020 14:41:14 -0300</lastBuildDate><atom:link href="https://matheuslc.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2020 13:31:13 -0300</lastBuildDate><atom:link href="https://matheuslc.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Criando Um Blog Com Hugo E Publicando No Gh Pages</title>
+      <link>https://matheuslc.github.io/posts/criando-um-blog-com-hugo-e-publicando-no-gh-pages/</link>
+      <pubDate>Thu, 20 Aug 2020 13:31:13 -0300</pubDate>
+      
+      <guid>https://matheuslc.github.io/posts/criando-um-blog-com-hugo-e-publicando-no-gh-pages/</guid>
+      <description>testing</description>
+    </item>
+    
     <item>
       <title>Value Objects, Primitive Possesion &amp; Types</title>
       <link>https://matheuslc.github.io/posts/value-objects/</link>
