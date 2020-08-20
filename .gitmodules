@@ -2,6 +2,6 @@
 	path = public
 	url = git@github.com:matheuslc/matheuslc.github.io.git
 	branch = github-pages
-[submodule "themes/monopriv"]
-	path = themes/monopriv
-	url = https://gitlab.com/kskarthik/monopriv.git
+[submodule "themes/base16"]
+	path = themes/base16
+	url = git@github.com:matheuslc/hugo-base16-theme.git
