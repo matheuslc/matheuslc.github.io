@@ -246,6 +246,6 @@ Usando melhor os sitemas de tipos, podemos melhorar nossa legibilidade do sistem
 
 ## Tem alguma visão diferente? Curtiu? Deixa um salve nos comentários
 
-Esse post é fruto dos meus estudos e experiências. Se você tem alguma maneira diferente de exergar ou acha que pode agregar, deixar nos comentários. Qualquer crítica construtiva é super bem-vinda e irá refletir nas ideias desse post também.
+Esse post é fruto dos meus estudos e experiências. Se você tem alguma maneira diferente de ver ou acha que pode agregar, deixar nos comentários. Qualquer crítica construtiva é super bem-vinda e irá refletir nas ideias desse post também.
 
 vaaaaaleu
