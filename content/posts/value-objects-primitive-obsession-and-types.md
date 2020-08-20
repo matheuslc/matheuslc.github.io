@@ -21,9 +21,9 @@ Garantindo que seu Value Object é imutável, você impede que bugs de [comparti
 
 Se você precisa que sua estrutura tenha uma identidade, como um ID único, pra conseguir referenciar explicitamente, esse seu valor é uma [**Entidade**](https://enterprisecraftsmanship.com/posts/entity-vs-value-object-the-ultimate-list-of-differences/).
 
-### Como eu comparo dois Value Objects para ver se são os mesmo? (structural equality)
+### Como eu comparo dois Value Objects para ver se são iguais? (structural equality)
 
-Em Golang, podemos comparar os tipos com **==**, tanto um *type* quanto uma *struct*. Se for do mesmo tipo e possuirem os mesmos campos com os mesmos valores, é igual, independente da referência de memória.
+Em Golang, podemos comparar os tipos com **==**, tanto um *type* quanto uma *struct*. Se for do mesmo tipo e possuírem os mesmos campos com os mesmos valores, é igual, independente da referência de memória.
 
 No Java (salve Javão), você precisaria sobrescrever o método **Equals** que verifica se dois objetos são iguais, verificando suas propriedades e não sua referência.
 
@@ -32,7 +32,7 @@ Então, se dois Value Objects são do mesmo tipo e possuem os mesmos valores, el
 ## Como assim?
 Simplificando ao máximo, ao invés de você usar um tipo primitivo (int, float, etc) para representar um valor, você abstraí esse tipo primitivo em um "objeto", adicionando um nome e um significado. Por definição e também para gente não sair criando tipo para tudo, o valor precisa ter comportamento.
 
-Um clássico exemplo de Value Object é o dinheiro. Que poderia ser represetando por um simples tipo. Abaixo veremos um exemplo com Dinheiro e vou adicionar o exemplo com o campo Name que ai é a mais a minha visão e não outras implementações.
+Um clássico exemplo de Value Object é o dinheiro. Que poderia ser representado por um simples tipo. Abaixo veremos um exemplo com Dinheiro e vou adicionar o exemplo com o campo Name que ai é a mais a minha visão e não outras implementações.
 
 ```go
 
@@ -127,7 +127,7 @@ E ai nasce mais um pacote *utils*.
 
 Um pacote utils não diz muito bem o que ele faz sem que o usuário vá lá e verifique todas as funções públicas que ele expõe.
 
-Por exemplo, poderíamos ter um pacote que sabe validar strings com regras definidas. Mas as chances de um novo desenvolvedor simplismente recriar a validação ao invés de procurar pelo pacote utils é grande. Reaproveitamos as regras de validação mas as checagens sempre vão precisar existir quando uma nova estrutura com o mesmo conceito existir.
+Por exemplo, poderíamos ter um pacote que sabe validar strings com regras definidas. Mas as chances de um novo desenvolvedor simplesmente recriar a validação ao invés de procurar pelo pacote utils é grande. Reaproveitamos as regras de validação mas as checagens sempre vão precisar existir quando uma nova estrutura com o mesmo conceito existir.
 
 ```go
 
@@ -231,7 +231,7 @@ Essa pergunta no Stack Exchance [when-is-primitive-obsession-not-a-code-smell](h
 
 A dor principal é começar a criar diversas abstrações quando as vezes os objetos dificilmente vão ser reusados em outros locais. Entrando em um famoso, temido e abstrato, over-engineering.
 
-Mas uma dúvida que tenho é se essa "over-engineering" não acontece por falta de boas estrutuas para criar Value Objects nas linguagens. Por exemplo, se para todos os tipos for necessário sobrescrever um método para que seja possível comparar dois Value Objects, vamos ter muito mais código, muito mais testes unitários etc. Se a linguagem possuir um suporte a tipos e estruturas que facilitam a implementação de Value Objects, magicamente isso deixa de ser over-engineering?
+Mas uma dúvida que tenho é se essa "over-engineering" não acontece por falta de boas estruturas para criar Value Objects nas linguagens. Por exemplo, se para todos os tipos for necessário sobrescrever um método para que seja possível comparar dois Value Objects, vamos ter muito mais código, muito mais testes unitários etc. Se a linguagem possuir um suporte a tipos e estruturas que facilitam a implementação de Value Objects, magicamente isso deixa de ser over-engineering?
 
 
 ### Tipos? Mas o nome é Value Object mano. Enfim a hipocrisia
@@ -242,7 +242,7 @@ Em golang, podemos descrever tipos estaticamente e criar tipos customizados para
 
 ## Conclusão
 
-Usando melhor os sitemas de tipos, podemos melhorar nossa legibilidade do sistema, deixar conceitos explícitos e permitir que o código seja uma documentação do negócio. Usando melhor o sistema de tipos e o conceito de **Value Objects**, podemos evitar **Primitive Obsession** e usar o compilador para testar nossas regras de negócio.
+Usando melhor os sistemas de tipos, podemos melhorar nossa legibilidade do sistema, deixar conceitos explícitos e permitir que o código seja uma documentação do negócio. Usando melhor o sistema de tipos e o conceito de **Value Objects**, podemos evitar **Primitive Obsession** e usar o compilador para testar nossas regras de negócio.
 
 ## Tem alguma visão diferente? Curtiu? Deixa um salve nos comentários
 
