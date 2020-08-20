@@ -14,7 +14,9 @@ git checkout -b gh-pages
 shopt -s extglob
 rm -r !(public|CNAME)
 
-mv public/* .
+cd public
+mv !(index.xml) ../
+cd ..
 git add .
 git commit -m "Remove everything except public package"
 git push -f origin gh-pages
