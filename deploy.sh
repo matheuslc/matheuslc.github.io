@@ -17,7 +17,7 @@ rm -r !(public|CNAME)
 mv public/* .
 git add .
 git commit -m "Remove everything except public package"
-git push origin gh-pages
+git push -f origin gh-pages
 
 
 
